@@ -1,7 +1,7 @@
 #ifndef _TEMP
 #define _TEMP
 
-uint8_t numOfDevices(int pin);
+//Prints the data from all sensors on the line
 String printAllData(int pin);
 
 #endif

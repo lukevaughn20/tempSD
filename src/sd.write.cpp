@@ -8,7 +8,8 @@ SdExFat SD;
 
 ExFatFile myFile;
 
-//For writing to file
+//Returns if no file is able to open
+// Rights message to sd card if does not fail
 void sdWrite(int pin, String file, String msg)
 {
     if(!SD.begin(4, SPI_SPEED))
@@ -26,7 +27,7 @@ void sdWrite(int pin, String file, String msg)
     }
 }
 
-//For reading a file
+//Reads contents from file then prints to Serial 
 void sdRead(int pin, String file)
 {
     myFile.open(file.c_str());

@@ -4,13 +4,7 @@
 //starting index for temp sensors
 int start = 0;
 
-//returns devices on the temp sensor line
-uint8_t  numOfDevices(int pin)
-{
-    DS18B20 ds(pin);
-    return + ds.getNumberOfDevices();
-}
-//returns the data from each sensor to a single string
+//returns the data from each sensor on the line in a single string
 String printAllData(int pin)
 {
     DS18B20 ds(pin);
